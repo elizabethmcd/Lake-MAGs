@@ -1,0 +1,5 @@
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001A_S48_L004_R1_001.fastq.gz	/mnt/gluster/emcdaniel/MENDOTA/KMBP001A_S48_L004_R2_001.fastq.gz	KMBP001A.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001B_S49_L004_R1_001.fastq.gz	/mnt/gluster/emcdaniel/MENDOTA/KMBP001B_S49_L004_R2_001.fastq.gz	KMBP001B.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001C_S50_L004_R1_001.fastq.gz	/mnt/gluster/emcdaniel/MENDOTA/KMBP001C_S50_L004_R2_001.fastq.gz	KMBP001C.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001D_S51_L004_R1_001.fastq.gz	/mnt/gluster/emcdaniel/MENDOTA/KMBP001D_S51_L004_R2_001.fastq.gz	KMBP001D.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001E_S52_L004_R1_001.fastq.gz	/mnt/gluster/emcdaniel/MENDOTA/KMBP001E_S52_L004_R2_001.fastq.gz	KMBP001E.fastq
