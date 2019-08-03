@@ -1,0 +1,23 @@
+# reformat r1 r2 fastqs to interleaved with bbtools
+
+# HTCondor Universe
+universe = vanilla
+log = meta_reformat_$(Cluster).log
+error = meta_reformat_$(Cluster)_$(Process).err
+requirements = (Target.HasGluster == true)
+
+# Exectuables
+executable = executables/reformat-fastqs.sh
+arguments = $(ref)
+
+# Transferring Files
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = /home/emcdaniel/software/BBMap_38.07.tar.gz
+
+# Compute resources 
+request_cpus = 2
+request_memory = 10GB
+request_disk = 75GB
+
+queue ref from metadata/queues/mendota-mags-reformat-merge-queue.txt
