@@ -1,0 +1,12 @@
+/mnt/gluster/emcdaniel/GEODES/GEODES005.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES005.qced.fastq.tar.gz	GEODES005-vs-GEODES005.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES005.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES006.qced.fastq.tar.gz	GEODES005-vs-GEODES006.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES006.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES006.qced.fastq.tar.gz	GEODES006-vs-GEODES006.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES006.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES005.qced.fastq.tar.gz	GEODES006-vs-GEODES005.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES057.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES057.qced.fastq.tar.gz	GEODES057-vs-GEODES057.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES057.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES058.qced.fastq.tar.gz	GEODES057-vs-GEODES058.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES058.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES057.qced.fastq.tar.gz	GEODES058-vs-GEODES057.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES058.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES058.qced.fastq.tar.gz	GEODES058-vs-GEODES058.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES117.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES117.qced.fastq.tar.gz	GEODES117-vs-GEODES117.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES117.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES118.qced.fastq.tar.gz	GEODES117-vs-GEODES118.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES118.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES117.qced.fastq.tar.gz	GEODES118-vs-GEODES117.bam
+/mnt/gluster/emcdaniel/GEODES/GEODES118.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES118.qced.fastq.tar.gz	GEODES118-vs-GEODES118.bam
