@@ -3,8 +3,8 @@
 # reformat r1 r2 fastqs to interleaved fastq files
 
 # Read in variables for running mapping
-r1=$(basename $1)
-r2=$(basename $2)
+r1=$(basename $1 .gz)
+r2=$(basename $2 .gz)
 out=$3
 
 # Setup directories
