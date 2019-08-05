@@ -23,7 +23,7 @@ cd ../
 
 # run reformatting
 
-bbmap/reformat.sh in1=metagenomes/$r1 in2=metagenomes/$r2 out=metagenomes/$outname
+bbmap/reformat.sh in1=metagenomes/$r1 in2=metagenomes/$r2 out=metagenomes/$out
 
 # bring back to gluster
 cp metagenomes/$outname /mnt/gluster/emcdaniel/MENDOTA/
