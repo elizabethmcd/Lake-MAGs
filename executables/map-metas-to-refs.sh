@@ -8,7 +8,7 @@ meta=$2
 outname=$3
 
 refbase=$(basename $1)
-metabase=$(basename $2 .tar.gz)
+metabase=$(basename $2)
 
 # Setup script for directories
 
@@ -28,10 +28,10 @@ tar -xzvf $metabase
 cd ../
 cp $1 refs/
 
-metarun=$(basename $metabase .qced.fastq)
+metarun=$(basename $metabase .tar.gz)
 
 # Perform mapping
-bbmap/bbmap.sh ref=refs/$refbase in=metagenomes/$metarun.qced.fastq outm=$outname idtag minid=0.95 nodisk -Xmx48g
+bbmap/bbmap.sh ref=refs/$refbase in=metagenomes/$metarun outm=$outname idtag minid=0.95 nodisk -Xmx48g
 
 # Make sorted BAM files
 ./samtools/bin/samtools sort $outname -o ${outname%.bam}.sorted.bam
