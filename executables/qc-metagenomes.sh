@@ -19,5 +19,5 @@ metarun=$(basename $metabase .fastq)
 bbmap/bbduk.sh in=metagenomes/$metarun.fastq out=metagenomes/$metarun.qced.fastq qtrim=r trimq=10 maq=10
 
 # Move back only the sorted BAM files to Gluster for binning purposes
-tar -czvf metagenomes/$metarun.qced.fastq.tar.gz metagenomes/$metarun.qced.fastq
-cp metagenomes/$metarun.qced.fastq.tar.gz /mnt/gluster/emcdaniel/MENDOTA/
+tar -czvf $metarun.qced.fastq.tar.gz metagenomes/$metarun.qced.fastq
+cp $metarun.qced.fastq.tar.gz /mnt/gluster/emcdaniel/MENDOTA/

@@ -25,6 +25,7 @@ tar -xvzf samtools.tar.gz
 cp $2 metagenomes/
 cd metagenomes
 tar -xzvf $metabase
+mv metagenomes/*.fastq .
 cd ../
 cp $1 refs/
 
