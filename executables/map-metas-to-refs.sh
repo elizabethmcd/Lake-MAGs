@@ -8,7 +8,7 @@ meta=$2
 outname=$3
 
 refbase=$(basename $1)
-metabase=$(basename $2)
+metabase=$(basename $2 .tar.gz)
 
 # Setup script for directories
 
