@@ -1,6 +1,5 @@
-/mnt/gluster/emcdaniel/GEODES/GEODES005.fastq.gz
-/mnt/gluster/emcdaniel/GEODES/GEODES006.fastq.gz
-/mnt/gluster/emcdaniel/GEODES/GEODES057.fastq.gz
-/mnt/gluster/emcdaniel/GEODES/GEODES058.fastq.gz
-/mnt/gluster/emcdaniel/GEODES/GEODES117.fastq.gz
-/mnt/gluster/emcdaniel/GEODES/GEODES118.fastq.gz
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001A.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001B.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001C.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001D.fastq
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001E.fastq
