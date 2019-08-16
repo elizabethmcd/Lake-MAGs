@@ -1,0 +1,5 @@
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001A.qced.fastq.tar.gz
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001B.qced.fastq.tar.gz
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001C.qced.fastq.tar.gz
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001D.qced.fastq.tar.gz
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001E.qced.fastq.tar.gz

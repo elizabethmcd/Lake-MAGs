@@ -1,0 +1,5 @@
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001A-scaffolds.fasta
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001B-scaffolds.fasta
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001C-scaffolds.fasta
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001D-scaffolds.fasta
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001E-scaffolds.fasta
