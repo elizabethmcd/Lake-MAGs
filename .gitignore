@@ -1,4 +1,7 @@
 errs/
 logs/
 outs/
+*.Rproj
+.Rhistory
 .DS_Store
+.Rproj.user
