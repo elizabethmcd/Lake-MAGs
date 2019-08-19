@@ -21,5 +21,5 @@ jgi_summarize_bam_contig_depths --outputDepth $refbase-depth.txt *.bam
 metabat2 -i $refbase.scaffolds.fasta -a $refbase-depth.txt -o $refbase-bins/bin
 
 # Zip up
-tar -cvf $refbase-bins.tar.gz $refbase-bins/
+tar -czvf $refbase-bins.tar.gz $refbase-bins/
 mv $refbase-bins.tar.gz /mnt/gluster/emcdaniel/GEODES/.
