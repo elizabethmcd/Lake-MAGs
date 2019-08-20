@@ -1,0 +1,1 @@
+/mnt/gluster/emcdaniel/GEODES/GEODES006.scaffolds.fasta	/mnt/gluster/emcdaniel/GEODES/GEODES006.qced.fastq.tar.gz	mappingResults/GEODES006-vs-GEODES006.bam

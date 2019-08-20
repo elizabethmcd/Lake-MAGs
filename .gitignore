@@ -1,3 +1,9 @@
+docker*
+geodes-bins/
+mendota-bins/
+*.out
+*.err
+*.log
 errs/
 logs/
 outs/

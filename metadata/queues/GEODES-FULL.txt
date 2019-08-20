@@ -1,4 +1,5 @@
 /mnt/gluster/emcdaniel/GEODES/GEODES005.scaffolds.fasta
+/mnt/gluster/emcdaniel/GEODES/GEODES006.scaffolds.fasta
 /mnt/gluster/emcdaniel/GEODES/GEODES057.scaffolds.fasta
 /mnt/gluster/emcdaniel/GEODES/GEODES058.scaffolds.fasta
 /mnt/gluster/emcdaniel/GEODES/GEODES117.scaffolds.fasta

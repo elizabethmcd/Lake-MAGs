@@ -1,0 +1,1 @@
+/mnt/gluster/emcdaniel/MENDOTA/KMBP001C-scaffolds.fasta

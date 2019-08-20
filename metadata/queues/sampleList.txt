@@ -1,0 +1,5 @@
+/home/emcdaniel/Lake-MAGs/geodes-bins/GEODES005-bins.tar.gz
+/home/emcdaniel/Lake-MAGs/geodes-bins/GEODES057-bins.tar.gz
+/home/emcdaniel/Lake-MAGs/geodes-bins/GEODES058-bins.tar.gz
+/home/emcdaniel/Lake-MAGs/geodes-bins/GEODES117-bins.tar.gz
+/home/emcdaniel/Lake-MAGs/geodes-bins/GEODES118-bins.tar.gz
