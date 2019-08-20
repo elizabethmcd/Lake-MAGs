@@ -1,14 +1,7 @@
 #!/bin/bash
 
 mkdir input
-archive=$1
-archbase=$(basename $1)
-tar -xvf $archbase
-refbase=$(basename $archbase .tar.gz)
-sample=$(basename $archbase -bins.tar.gz)
-mkdir $sample-checkm
-for filename in $refbase/*.fa; do cp $filename ${filename%.fa}.fna; done
-for filename in $refbase/*.fna; do cp $filename input/; done
+mv $1 input
 
 # Running lineage specific marker set
 
@@ -21,6 +14,4 @@ contamination=$(awk -F', ' '{for(i=1;i<=NF;i++){if ($i ~ /Contamination/){print 
 
 echo "${1%.*}" $tax $length $complete $contamination > "${sample%.*}".checkm.lineage.txt
 
-mv ${sample%.*}".checkm.lineage.txt $sample-checkm
-mv output/ $sample-checkm
-tar -czf $sample-checkm.tgz $sample-checkm/
+rm -r output/
