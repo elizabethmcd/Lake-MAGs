@@ -19,8 +19,8 @@ arguments = $(ref)
 # transfer_input_files = 
 
 # Compute resources 
-request_cpus = 1
-request_memory = 100GB
-request_disk = 50GB
+request_cpus = 4
+request_memory = 250GB
+request_disk = 200GB
 
 queue ref from metadata/queues/GEODES006-redo.txt
