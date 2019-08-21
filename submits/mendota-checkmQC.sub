@@ -29,4 +29,4 @@ request_cpus = 4
 request_memory = 40GB
 request_disk = 12GB
 #
-queue binarchive from metadata/queues/mendota-bins-to-qc.txt
+queue bin from metadata/queues/mendota-bins-to-qc.txt
