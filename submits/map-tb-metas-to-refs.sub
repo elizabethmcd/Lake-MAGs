@@ -1,0 +1,25 @@
+# map Trout Bog metagenomic reads to Trout Bog reference set
+
+# HTCondor Universe
+universe = vanilla
+log = meta_mapping_$(Cluster).log
+error = meta_mapping_$(Cluster)_$(Process).err
+requirements = (OpSys == "LINUX") && (Target.HasGluster == true) && (OpSysMajorVer =?= 7)
+
+# Exectuables
+executable = executables/map-tb-metas-to-refs.sh
+arguments = $(ref) $(meta) $(outname)
+output = meta_mapping_$(Cluster).out
+
+# Transferring Files
+# should_transfer_files = YES
+# when_to_transfer_output = ON_EXIT
+transfer_input_files = /home/emcdaniel/software/BBMap_38.07.tar.gz,/home/emcdaniel/software/samtools.tar.gz,scripts/calc-mapping-stats.py,scripts/countBases.py,/home/emcdaniel/python.tar.gz
+
+# Compute resources
+request_cpus = 10
+request_memory = 200GB
+request_disk = 250GB
+
+
+queue ref,meta,outname from metadata/queues/tb-refs-mapping.txt

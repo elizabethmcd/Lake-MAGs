@@ -38,4 +38,4 @@ bbmap/bbmap.sh ref=refs/$refbase in=metagenomes/$metarun outm=$outname idtag min
 ./samtools/bin/samtools sort $outname -o ${outname%.bam}.sorted.bam
 
 # Move back only the sorted BAM files to Gluster for binning purposes
-cp ${outname%.bam}.sorted.bam /mnt/gluster/emcdaniel/GEODES/
+cp ${outname%.bam}.sorted.bam /mnt/gluster/emcdaniel/GEODES/mendota
