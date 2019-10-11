@@ -2,14 +2,14 @@
 
 # HTCondor Universe
 universe = vanilla
-log = meta_mapping_$(Cluster).log
-error = meta_mapping_$(Cluster)_$(Process).err
+log = logs/meta_mapping_$(Cluster).log
+error = errs/meta_mapping_$(Cluster)_$(Process).err
 requirements = (OpSys == "LINUX") && (Target.HasGluster == true) && (OpSysMajorVer =?= 7)
 
 # Exectuables
 executable = executables/map-sparkling-metas-to-refs.sh
 arguments = $(ref) $(meta) $(outname)
-output = meta_mapping_$(Cluster).out
+output = outs/meta_mapping_$(Cluster).out
 
 # Transferring Files
 # should_transfer_files = YES

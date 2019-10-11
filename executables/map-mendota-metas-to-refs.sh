@@ -79,3 +79,8 @@ mv mappingResults/*.sorted.bam $refname-vs-$metaname/
 mv mappingResults/*.sorted.bam.bai $refname-vs-$metaname/
 tar -czvf $refname-vs-$metaname.tar.gz $refname-vs-$metaname/
 cp $refname-vs-$metaname.tar.gz /mnt/gluster/emcdaniel/GEODES/mendota
+
+rm *.txt
+rm *.len
+rm */*.fastq
+rm */*.bam
