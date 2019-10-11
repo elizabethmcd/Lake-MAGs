@@ -2,17 +2,7 @@
 
 # Run mapping of short metagenomic reads to a reference
 
-# Read in variables for running mapping
-ref=$1
-meta=$2
-outname=$3
-
-refbase=$(basename $1)
-metabase=$(basename $2)
-refname=$(basename $refbase .fna)
-metaname=$(basename $metabase .qced.fastq.tar.bam)
-
-# Setup script for directories
+# setup
 
 mkdir metagenomes
 mkdir refs
@@ -21,16 +11,29 @@ mkdir mappingResults
 # Programs
 tar -xvzf BBMap_38.07.tar.gz
 tar -xvzf samtools.tar.gz
+tar -xvzf python.tar.gz
+
+# Python
+mkdir home
+export PATH=$(pwd)/python/bin:$PATH
+export HOME=$(pwd)/home
+chmod u+x *.py
 
 # Copy over assembly and metagenomic read files from Gluster and decompress
-
+# Read in variables for running mapping
+ref=$1
+meta=$2
+outname=$3
+refbase=$(basename $1)
+metabase=$(basename $2)
+refname=$(basename $refbase .fna)
+metaname=$(basename $metabase .qced.fastq.tar.gz)
+cp $1 refs/
 cp $2 metagenomes/
 cd metagenomes
 tar -xzvf $metabase
 mv metagenomes/*.fastq .
 cd ../
-cp $1 refs/
-
 metarun=$(basename $metabase .tar.gz)
 
 # Perform mapping
