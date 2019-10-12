@@ -40,7 +40,7 @@ metarun=$(basename $metabase .tar.gz)
 bbmap/bbmap.sh ref=refs/$refbase in=metagenomes/$metarun outm=$outname idtag minid=0.95 nodisk -Xmx48g
 
 # Make sorted BAM files
-for file in mappingResults/*.qced.bam; do
+for file in mappingResults/*.bam; do
     outsort=$(basename $file .qced.fastq.tar.bam).sorted.bam;
     ./samtools/bin/samtools sort $file -o mappingResults/$outsort;
 done
