@@ -48,7 +48,7 @@ done
 # get depth
 for file in mappingResults/*.sorted.bam; do
     outdepth=$(basename $file .sorted.bam).depth;
-    ./samtools/bin/samtoiols depth $file > mappingResults/$outdepth;
+    ./samtools/bin/samtools depth $file > mappingResults/$outdepth;
 done
 
 # sorted, indexed BAM file
