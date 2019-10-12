@@ -84,3 +84,5 @@ rm *.txt
 rm *.len
 rm */*.fastq
 rm */*.bam
+rm */*.gz
+rm *.gz
