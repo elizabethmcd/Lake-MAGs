@@ -73,7 +73,7 @@ for file in mappingResults/*.depth; do
 done 
 
 # bring back stats and sorted/indexed BAM files to gluster
-mkdir $refnmae-vs-$metaname
+mkdir $refname-vs-$metaname
 mv *.coverage.txt $refname-vs-$metaname/
 mv mappingResults/*.sorted.bam $refname-vs-$metaname/
 mv mappingResults/*.sorted.bam.bai $refname-vs-$metaname/
