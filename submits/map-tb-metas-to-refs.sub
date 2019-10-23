@@ -17,8 +17,8 @@ output = outs/meta_mapping_$(Cluster).out
 transfer_input_files = /home/emcdaniel/software/BBMap_38.07.tar.gz,/home/emcdaniel/software/samtools.tar.gz,scripts/calc-mapping-stats.py,scripts/countBases.py,/home/emcdaniel/software/python.tar.gz
 
 # Compute resources
-request_cpus = 10
-request_memory = 200GB
+request_cpus = 4
+request_memory = 100GB
 request_disk = 250GB
 
 
