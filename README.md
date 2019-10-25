@@ -8,7 +8,6 @@ This repository contains scripts and workflows for reassembling and binning meta
 - MetaBAT
 - CheckM
 - dRep
-- Anvi'o
 - GTDB-tk
 - Prokka
 - Kallisto
@@ -29,8 +28,10 @@ This repository contains scripts and workflows for reassembling and binning meta
 
 ## Metatranscriptomics Workflow 
 
+Before using the kallisto metatranscriptomics pipeline, each RNAseq experiment must be quality filtered, rRNA removed, and files deinterleaved to work with kallisto. The latter can be done with `queue-deinterleave.sh` to queue the set of fastq files to be deinterleaved with the `deainterleave_fastq.sh` script. 
+
 1. Install kallisto with `conda create -n kallisto kallisto`
-2. Create reference mapping database
-3. Map RNAseq reads to the reference mapping database
-4. Quantify and normalize reads
-5. Functional annotation (KofamKOALA)
+2. Create reference mapping database with `kallisto index`
+3. Map RNAseq reads to the reference mapping database with `kallisto quant`
+4. Quantify and normalize reads (R package tximport)
+5. Functional annotation (KofamKOALA), or BlastKOALA of the collection of genes
