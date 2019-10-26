@@ -1,3 +1,5 @@
+results/
+transcriptomes/
 .RData
 docker*
 geodes-bins/
