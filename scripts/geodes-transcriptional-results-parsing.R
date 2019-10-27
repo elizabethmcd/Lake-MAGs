@@ -92,7 +92,7 @@ sparkling.bins$avg <- rowMeans(sparkling.bins[2:40])
       # take out sames with weird NaN mapping & double check
 trout.bins <- aggregate(troutBog.final[3:33], list(troutBog.final$genome), sum) %>% select(-c(GEODES068, GEODES072))
 trout.bins$sum <- rowSums(trout.bins[2:30])
-trout.bins$avg <- rowSums(trout.bins[2:30])
+trout.bins$avg <- rowMeans(trout.bins[2:30])
 # save to select certain bins
 write.csv(mendota.bins, "/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/results/transcriptomes/mendota-bin-norm-counts.csv", quote=FALSE, row.names=FALSE)
 write.csv(sparkling.bins, "/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/results/transcriptomes/sparkling-bin-norm-counts.csv", quote=FALSE, row.names=FALSE)
@@ -124,6 +124,26 @@ thermo.no.zeros <- thermo %>% filter(sum > 0)
 write.csv(thermo.no.zeros, "/Users/emcdaniel/Desktop/McMahon-Lab/MeHg-Projects/thermoleo/metadata/annotations/geodes-thermo-no-zeros.csv", quote=FALSE, row.names=FALSE)
 colSums(thermo[3:33])
 colMeans(thermo[3:33])
+
+# plot of avg expression by bin for each lake
+  # mendota
+mendota.classf <- merged.metadata.counts %>% filter(grepl('GEODES11', genome)) %>% select(genome, classification, norm_avg)
+mendota.cleaned <- separate(mendota.classf, classification, into=c("Domain", "Phyla", "Class", "Order", "Family", "Genus", "Species"), sep=';') %>% select(genome, Phyla, norm_avg)
+men.plt <- ggplot(mendota.cleaned, aes(x=reorder(genome,-norm_avg), y=norm_avg, fill=Phyla)) + geom_col() + labs(x="Bin", y="Average Normalized Expressoin (TPM)") + theme_classic() + theme(axis.text.x=element_text(angle=85, vjust=0.5)) + scale_fill_brewer(palette="Paired")
+men.plt
+ggsave(filename="/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/results/transcriptomes/mendota-avg-expression-bins.png", plot=men.plt, height=15, width=25, units=c("cm"))
+  # trout
+trout.classf <- merged.metadata.counts %>% filter(grepl('GEODES05', genome)) %>% select(genome, classification, norm_avg)
+trout.cleaned <- separate(trout.classf, classification, into=c("Domain", "Phyla", "Class", "Order", "Family", "Genus", "Species"), sep=';') %>% select(genome, Phyla, norm_avg)
+trout.plt <- ggplot(trout.cleaned, aes(x=reorder(genome,-norm_avg), y=norm_avg, fill=Phyla)) + geom_col() + labs(x="Bin", y="Average Normalized Expressoin (TPM)") + theme_classic() + theme(axis.text.x=element_text(angle=85, vjust=0.5)) + scale_fill_brewer(palette="Paired")
+trout.plt
+ggsave(filename="/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/results/transcriptomes/trout-avg-expression-bins.png", plot=trout.plt, height=15, width=25, units=c("cm"))
+  # sparkling
+sparkling.classf <- merged.metadata.counts %>% filter(grepl('GEODES00', genome)) %>% select(genome, classification, norm_avg)
+sparkling.cleaned <- separate(sparkling.classf, classification, into=c("Domain", "Phyla", "Class", "Order", "Family", "Genus", "Species"), sep=';') %>% select(genome, Phyla, norm_avg)
+sparkling.plt <- ggplot(sparkling.cleaned, aes(x=reorder(genome,-norm_avg), y=norm_avg, fill=Phyla)) + geom_col() + labs(x="Bin", y="Average Normalized Expressoin (TPM)") + theme_classic() + theme(axis.text.x=element_text(angle=85, vjust=0.5)) + scale_fill_brewer(palette="Paired")
+sparkling.plt
+ggsave(filename="/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/results/transcriptomes/sparkling-avg-expression-bins.png", plot=sparkling.plt, height=15, width=25, units=c("cm"))
 
 # merge with Prokka annotations 
 annots <- read_delim("/Users/emcdaniel/Desktop/McMahon-Lab/MeHg-Projects/thermoleo/metadata/annotations/GEODES057-bin.68-annots.txt", delim="\t", col_names=TRUE)
