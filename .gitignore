@@ -1,3 +1,9 @@
+mendota/
+crystalbog/
+troutbog/
+*.fastq
+metagenomes/
+assemblies/
 results/
 transcriptomes/
 .RData
