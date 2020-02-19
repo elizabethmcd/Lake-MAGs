@@ -4,7 +4,6 @@ troutbog/
 *.fastq
 metagenomes/
 assemblies/
-results/
 transcriptomes/
 .RData
 docker*
