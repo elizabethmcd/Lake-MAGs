@@ -4,7 +4,6 @@ troutbog/
 *.fastq
 metagenomes/
 assemblies/
-transcriptomes/
 .RData
 docker*
 geodes-bins/

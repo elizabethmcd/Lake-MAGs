@@ -1,0 +1,13 @@
+{
+	"n_targets": 99264,
+	"n_bootstraps": 0,
+	"n_processed": 86662,
+	"n_pseudoaligned": 4542,
+	"n_unique": 4525,
+	"p_pseudoaligned": 5.2,
+	"p_unique": 5.2,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Fri Oct 25 14:28:05 2019",
+	"call": "kallisto quant -i troutBog-index -o GEODES067 GEODES067-nonrRNA-F.fastq GEODES067-nonrRNA-R.fastq"
+}

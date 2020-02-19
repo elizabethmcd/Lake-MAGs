@@ -1,0 +1,13 @@
+{
+	"n_targets": 82766,
+	"n_bootstraps": 0,
+	"n_processed": 213850,
+	"n_pseudoaligned": 6930,
+	"n_unique": 6902,
+	"p_pseudoaligned": 3.2,
+	"p_unique": 3.2,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Fri Oct 25 14:57:41 2019",
+	"call": "kallisto quant -i mendota-index -o GEODES150 GEODES150-nonrRNA-F.fastq GEODES150-nonrRNA-R.fastq"
+}

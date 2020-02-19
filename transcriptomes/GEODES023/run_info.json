@@ -1,0 +1,13 @@
+{
+	"n_targets": 104794,
+	"n_bootstraps": 0,
+	"n_processed": 193115,
+	"n_pseudoaligned": 14061,
+	"n_unique": 14020,
+	"p_pseudoaligned": 7.3,
+	"p_unique": 7.3,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Fri Oct 25 14:17:35 2019",
+	"call": "kallisto quant -i sparkling-index -o GEODES023 GEODES023-nonrRNA-F.fastq GEODES023-nonrRNA-R.fastq"
+}
