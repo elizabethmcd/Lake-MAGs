@@ -1,0 +1,12 @@
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300003811.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300003825.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004693.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004771.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004772.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004773.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004774.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004775.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004776.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004802.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004804.a.fna
+/home/GLBRCORG/emcdaniel/Lake-MAGs/mary/assemblies/3300004805.a.fna

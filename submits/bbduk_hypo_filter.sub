@@ -1,0 +1,17 @@
+##################
+# bbduk_filter.sub 
+# Submission script for filtering metagenomic sequences with fastp
+# Elizabeth McDaniel
+##################
+
+request_cpus = 4
+request_memory = 10GB
+
+executable = /home/GLBRCORG/emcdaniel/Lake-MAGs/executables/bbduk_hypo_filter.sh
+arguments = $(reads)
+
+output = /home/GLBRCORG/emcdaniel/Lake-MAGs/outs/$(Cluster)_$(Process)_bbfilter.out
+error = /home/GLBRCORG/emcdaniel/Lake-MAGs/errs/$(Cluster)_$(Process)_bbfilter.err
+log = /home/GLBRCORG/emcdaniel/Lake-MAGs/logs/$(Cluster)_$(Process)_bbfilter.log
+
+queue reads from /home/GLBRCORG/emcdaniel/Lake-MAGs/metadata/troutBog-hypo-raw-reads-queue.txt
