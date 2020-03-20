@@ -1,0 +1,4 @@
+bin,classification,classf,size,completeness,redundancy
+GEODES118-bin.101,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Cyanobacteriales;f__Nostocaceae;g__UKL13-PB;s__UKL13-PB sp001593825,'p__Cyanobacteria',3736886,88.5625,0.444444444444444
+GEODES117-bin.31,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Synechococcales;f__Cyanobiaceae;g__PCC7001;s__,'p__Cyanobacteria',1999542,84.6014492753623,5.08481554677207
+GEODES118-bin.197,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Synechococcales;f__Cyanobiaceae;g__;s__,'p__Cyanobacteria',2960004,90.3532608695652,3.5449604743083

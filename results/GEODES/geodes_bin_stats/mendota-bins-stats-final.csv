@@ -1,0 +1,35 @@
+bin,classification,classf,size,completeness,redundancy
+GEODES118-bin.99,d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__Sphingomonadales;f__Sphingomonadaceae;g__Sandarakinorhabdus;s__Sandarakinorhabdus limnophila,'c__Alphaproteobacteria',2326214,88.9751552795031,0.434782608695652
+GEODES118-bin.101,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Cyanobacteriales;f__Nostocaceae;g__UKL13-PB;s__UKL13-PB sp001593825,'p__Cyanobacteria',3736886,88.5625,0.444444444444444
+GEODES117-bin.96,d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__Sphingomonadales;f__Sphingomonadaceae;g__Ga0077559;s__Ga0077559 sp002299895,'o__Sphingomonadales',1717834,77.8738571651641,0.930982176715965
+GEODES118-bin.118,d__Bacteria;p__Firmicutes;c__Bacilli;o__RFN20;f__CAG-826;g__UBA970;s__,'k__Bacteria',792023,83.9325842696629,0.561797752808989
+GEODES117-bin.31,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Synechococcales;f__Cyanobiaceae;g__PCC7001;s__,'p__Cyanobacteria',1999542,84.6014492753623,5.08481554677207
+GEODES118-bin.197,d__Bacteria;p__Cyanobacteria;c__Cyanobacteriia;o__Synechococcales;f__Cyanobiaceae;g__;s__,'p__Cyanobacteria',2960004,90.3532608695652,3.5449604743083
+GEODES118-bin.127,d__Bacteria;p__Actinobacteriota;c__Actinobacteria;o__Mycobacteriales;f__Mycobacteriaceae;g__Mycolicibacterium;s__,'o__Actinomycetales',3217444,95.2605570530099,0.582373601241526
+GEODES118-bin.162,d__Bacteria;p__Actinobacteriota;c__Actinobacteria;o__Nanopelagicales;f__Nanopelagicaceae;g__MAG-120802;s__,'o__Actinomycetales',1157358,79.3383458646616,0
+GEODES118-bin.25,d__Bacteria;p__Actinobacteriota;c__Acidimicrobiia;o__Microtrichales;f__Ilumatobacteraceae;g__;s__,'k__Bacteria',1462143,83.1623931623932,2.56410256410256
+GEODES118-bin.177,d__Bacteria;p__Actinobacteriota;c__Acidimicrobiia;o__Microtrichales;f__Ilumatobacteraceae;g__UBA2093;s__,'k__Bacteria',1755684,84.4827586206897,0
+GEODES118-bin.73,d__Bacteria;p__Actinobacteriota;c__Acidimicrobiia;o__Microtrichales;f__Ilumatobacteraceae;g__;s__,'k__Bacteria',1804642,84.2657342657343,1.70940170940171
+GEODES118-bin.65,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Chthoniobacterales;f__Terrimicrobiaceae;g__UBA967;s__,'k__Bacteria',2088208,89.9650929702081,1.35135135135135
+GEODES117-bin.5,d__Bacteria;p__Verrucomicrobiota;c__Verrucomicrobiae;o__Opitutales;f__Opitutaceae;g__UBA6669;s__,'k__Bacteria',3186763,94.5205479452055,0.570776255707762
+GEODES118-bin.78,d__Bacteria;p__Planctomycetota;c__Planctomycetes;o__Pirellulales;f__Pirellulaceae;g__;s__,'k__Bacteria',4199209,89.5199459093982,0.191570881226054
+GEODES117-bin.15,d__Bacteria;p__Planctomycetota;c__Planctomycetes;o__Pirellulales;f__UBA1268;g__BAIKAL-G1-2R;s__,'k__Bacteria',3804836,85.5983772819473,1.53256704980843
+GEODES117-bin.77,d__Bacteria;p__Planctomycetota;c__Phycisphaerae;o__Phycisphaerales;f__SM1A02;g__;s__,'k__Bacteria',2456665,92.0454545454545,9.65909090909091
+GEODES117-bin.84,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Flavobacteriales;f__Flavobacteriaceae;g__Flavobacterium;s__,'f__Flavobacteriaceae',2873507,94.7895356766474,2.0906949352179
+GEODES118-bin.23,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Sphingobacteriales;f__Sphingobacteriaceae;g__Pedobacter_A;s__,'p__Bacteroidetes',2963087,85.302049622438,6.6747572815534
+GEODES117-bin.116,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__NS11-12g;f__UBA955;g__;s__,'k__Bacteria',2087346,87.1584699453552,1.63934426229508
+GEODES118-bin.59,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Cytophagales;f__Spirosomaceae;g__Leadbetterella;s__,'o__Cytophagales',3570168,83.4984596908939,1.93452380952381
+GEODES118-bin.92,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Chitinophagales;f__Chitinophagaceae;g__;s__,'p__Bacteroidetes',3124015,97.6518883415435,1.60098522167488
+GEODES118-bin.27,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Chitinophagales;f__Chitinophagaceae;g__Sediminibacterium;s__,'p__Bacteroidetes',2180861,89.8029556650246,0.492610837438424
+GEODES118-bin.85,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Chitinophagales;f__Chitinophagaceae;g__Ferruginibacter;s__,'p__Bacteroidetes',2752715,94.3349753694581,0.985221674876847
+GEODES118-bin.74,d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__;f__;g__;s__,'p__Bacteroidetes',2027952,85.4603174603175,0.238095238095238
+GEODES117-bin.173,d__Bacteria;p__Gemmatimonadota;c__Gemmatimonadetes;o__Gemmatimonadales;f__Gemmatimonadaceae;g__Gemmatimonas;s__,'k__Bacteria',3692422,94.5054945054945,3.11355311355311
+GEODES117-bin.56,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Steroidobacterales;f__Steroidobacteraceae;g__UBA964;s__,'c__Gammaproteobacteria',2026044,78.6040660225443,1.20772946859903
+GEODES118-bin.181,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Limnohabitans;s__,'o__Burkholderiales',1934763,79.5890839567057,4.19003115264797
+GEODES117-bin.200,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Limnohabitans;s__,'o__Burkholderiales',1820949,79.350332607219,1.53816199376947
+GEODES117-bin.166,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Ramlibacter;s__,'o__Burkholderiales',3187599,84.9752447708055,2.42008749571465
+GEODES118-bin.98,d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__SCGC-AAA027-K21;s__,'c__Betaproteobacteria',2275444,85.111082347631,0.569516906288582
+GEODES118-bin.180,d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__Rhizobiales;f__Beijerinckiaceae;g__;s__,'o__Rhizobiales',3814434,95.6635318704284,0.626959247648903
+GEODES118-bin.186,d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__Sphingomonadales;f__Sphingomonadaceae;g__Porphyrobacter;s__,'o__Sphingomonadales',2586693,92.7467710633742,1.17557830868411
+GEODES118-bin.153,d__Bacteria;p__Myxococcota;c__Polyangia;o__Polyangiales;f__Polyangiaceae;g__;s__,'c__Deltaproteobacteria',3286338,77.7798259088582,2.09677419354839
+GEODES118-bin.15,d__Bacteria;p__Bdellovibrionota;c__Bdellovibrionia;o__Bdellovibrionales;f__Bdellovibrionaceae;g__Ga0074139;s__,'k__Bacteria',2612078,92.1734234234234,1.8018018018018
