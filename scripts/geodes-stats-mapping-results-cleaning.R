@@ -3,16 +3,27 @@ library(reshape2)
 
 # merge stats and gtdbtk metadata
 
-stats = read.delim("metadata/bin_stats/all-stats.txt", sep="\t")
-gtdb = read.delim("metadata/bin_stats/gtdbtk.bac120.summary.tsv", sep="\t")
+stats = read.delim("results/GEODES/geodes_bin_stats/all-stats.txt", sep="\t")
+gtdb = read.delim("results/GEODES/geodes_bin_stats/gtdbtk.bac120.summary.tsv", sep="\t")
 colnames(gtdb)[1] = c("bin")
 names = gtdb[,c(1,2)]
 merged = left_join(names, stats)
+write.csv(merged, 'results/GEODES/geodes_bin_stats/all-geodes-final-stats.csv', quote=FALSE, row.names = FALSE)
+
+# sparkling stats
+sparkling_stats = merged %>% filter(grepl('GEODES005|GEODES006', bin))
+write.csv(sparkling_stats, 'results/GEODES/geodes_bin_stats/sparkling-bins-stats-final.csv', quote=FALSE, row.names = FALSE)
+# tb stats
+tb_stats = merged %>% filter(grepl('GEODES057|GEODES058', bin))
+write.csv(tb_stats, 'results/GEODES/geodes_bin_stats/tb-bins-stats-final.csv', quote= FALSE, row.names = FALSE)
+# mendota stats
+mendota_stats = merged %>% filter(grepl('GEODES117|GEODES118', bin))
+write.csv(mendota_stats, 'results/GEODES/geodes_bin_stats/mendota-bins-stats-final.csv', quote=FALSE, row.names = FALSE)
 
 # mapping files
-mendota = read.delim("metadata/mapping/mendota-mapping-results.txt", sep="\t")
-troutBog = read.delim("metadata/mapping/troutBog-mapping-results.txt", sep="\t")
-sparkling = read.delim("metadata/mapping/sparkling-mapping-results.txt", sep="\t")
+mendota = read.delim("results/GEODES/GEODES_mapping_results/mendota-mapping-results-v2.txt", sep="\t")
+troutBog = read.delim("results/GEODES/GEODES_mapping_results/troutBog-mapping-results.txt", sep="\t")
+sparkling = read.delim("results/GEODES/GEODES_mapping_results/sparkling-mapping-results-v2.txt", sep="\t")
 
 # mendota
 men = mendota[,c(2,3,8)]
