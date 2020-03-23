@@ -11,4 +11,3 @@ out=$3
 
 $BBPATH/bbmap.sh ref=$ref in=$meta outm=$out idtag minid=0.95 nodisk -Xmx50g
 $SAMTOOLS/samtools sort $out -o ${out%.bam}.sorted.bam
-
