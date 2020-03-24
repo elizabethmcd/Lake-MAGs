@@ -13,7 +13,15 @@ bowtie2-build bins.fasta bt2/combined-bins.fasta
 
 # queue mapping 
 # create file with list of complete paths of each metagenome files, second column the output destination
-# use the queue-bowtie2-mapping.sh script
+# If have just a few metagenomes, can write a script of a for loop such as 
+
+for file in ~/EBPR/coassembly/metagenomes/cleaned_fastqs/*.qced.fastq; do
+	name=$(basename $file .qced.fastq);
+	bowtie2 -p 4 -x bt2/R1R2-EBPR-bins-index.fasta -q $file > mapping/$name-mapping.sam;
+done
+
+# or queue from a metadata file so can re-use the queuing script and not have to create new for loop scripts for each dataset
+
 
 # queue inStrain profiling
 
