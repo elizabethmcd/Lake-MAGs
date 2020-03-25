@@ -20,7 +20,20 @@ for file in ~/EBPR/coassembly/metagenomes/cleaned_fastqs/*.qced.fastq; do
 	bowtie2 -p 4 -x bt2/R1R2-EBPR-bins-index.fasta -q $file > mapping/$name-mapping.sam;
 done
 
-# or queue from a metadata file so can re-use the queuing script and not have to create new for loop scripts for each dataset
+# stats of % reads mapping back to an assembly or reference within BAM
+samtools idxstats your_file.bam
+awk 'FNR==NR{sum+=$3;next}{print $1 "\t" $3/sum}' <(samtools idxstats your_file.bam) <(samtools idxstats your_file.bam)
+
+# queue mapping with coverM
+coverm genome \
+    --reference POS-bins-combined.fasta \
+    -s "~" \
+    -m relative_abundance \
+    --interleaved ../cleaned_fastqs/*-interleaved.fastq \
+    --min-read-aligned-percent 0.75 \
+    --min-read-percent-identity 0.95 \
+    --min-covered-fraction 0 \
+    -x fasta -t 5 &> log.txt
 
 
 # queue inStrain profiling
