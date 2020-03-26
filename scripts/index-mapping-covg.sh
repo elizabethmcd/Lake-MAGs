@@ -24,7 +24,18 @@ done
 samtools idxstats your_file.bam
 awk 'FNR==NR{sum+=$3;next}{print $1 "\t" $3/sum}' <(samtools idxstats your_file.bam) <(samtools idxstats your_file.bam)
 
-# queue mapping with coverM
+## getting mapping %'s from reads mapping to the assembly from MetaBat depth files
+# create counts file
+for file in *-depth.txt; 
+    do name=$(basename $file -depth.txt); 
+    awk '{print $1"\t"$4"\t"$6"\t"$8}' $file > $name-counts.txt; 
+done
+
+# sum the relevant columns
+awk '{sum +=$4} END {print sum}' 3300026302-counts-raw.txt
+
+## mapping to indvidiual bins stats
+# queue mapping with coverM to get relative abundance
 coverm genome \
     --reference POS-bins-combined.fasta \
     -s "~" \
@@ -35,6 +46,20 @@ coverm genome \
     --min-covered-fraction 0 \
     -x fasta -t 5 &> log.txt
 
+# coverage values
+
+coverm genome \
+    --reference POS-bins-combined.fasta \
+    -s "~" \
+    -m covered_bases \
+    --interleaved ../cleaned_fastqs/*-interleaved.fastq \
+    --min-read-aligned-percent 0.75 \
+    --min-read-percent-identity 0.95 \
+    --min-covered-fraction 0 \
+    -x fasta -t 5 &> POS_coverage_calcs.txt
+
+# stats on mapping to assemblies
+coverm contig --reference $file --interleaved ../../cleaned_fastqs/*.qced-fastq -m count -t 4 &> $name-counts.txt
 
 # queue inStrain profiling
 
