@@ -51,12 +51,12 @@ coverm genome \
 coverm genome \
     --reference POS-bins-combined.fasta \
     -s "~" \
-    -m covered_bases \
+    -m reads_per_base count \
     --interleaved ../cleaned_fastqs/*-interleaved.fastq \
     --min-read-aligned-percent 0.75 \
     --min-read-percent-identity 0.95 \
     --min-covered-fraction 0 \
-    -x fasta -t 5 &> POS_coverage_calcs.txt
+    -x fasta -t 5 &> POS_counts.txt
 
 # stats on mapping to assemblies
 coverm contig --reference $file --interleaved ../../cleaned_fastqs/*.qced-fastq -m count -t 4 &> $name-counts.txt
