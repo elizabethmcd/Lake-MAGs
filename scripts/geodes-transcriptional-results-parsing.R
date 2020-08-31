@@ -3,7 +3,7 @@ library(tibble)
 library(tidyverse)
 
 # Merging kallisto count files per lake GEODES transcriptional time-series experiment
-dir <- "/Users/emcdaniel/Desktop/McMahon-Lab/Lake-MAGs/transcriptomes"
+dir <- "results/GEODES/transcriptomes"
 # sample names
 mendota <- read.table(file.path(dir, "mendota-samples.txt"), header=TRUE)
 sparkling <- read.table(file.path(dir, "sparkling-samples.txt"), header=TRUE)
@@ -79,6 +79,11 @@ trout.raw.bins <- aggregate(trout.raw.final[3:33], list(trout.raw.final$genome),
 trout.raw.bins$sum <- rowSums(trout.raw.bins[2:30])
 trout.raw.bins$avg <- rowMeans(trout.raw.bins[2:30])
 
+# save final normalized sets 
+write.csv(mendota.final, "results/GEODES/transcriptome_tables/mendota_final_normalized_table.csv", row.names = FALSE, quote=FALSE)
+write.csv(sparkling.final, "results/GEODES/transcriptome_tables/sparkling_final_normalized_table.csv", row.names = FALSE, quote=FALSE)
+write.csv(troutBog.final, "results/GEODES/transcriptome_tables/troutBog_final_normalized_table.csv")
+thermoleo <- troutBog.final %>% filter(genome == 'GEODES057-bin.68')
 # aggregate normalized counts for each dataset by bin (avg and sum of counts)
   # mendota
 mendota.bins <- aggregate(mendota.final[3:41], list(mendota.final$genome), sum)
