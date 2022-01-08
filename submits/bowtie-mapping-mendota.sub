@@ -1,0 +1,17 @@
+##################
+# bowtie-mapping.sub
+# Submission script for mapping metagenomic reads to concatenated set of bins with bowtie2 - Mendota
+# Elizabeth McDaniel
+##################
+
+request_cpus = 6
+request_memory = 150GB
+
+executable = /home/GLBRCORG/emcdaniel/Lake-MAGs/executables/bowtie-mapping-mendota.sh
+arguments = $(reads)
+
+output = /home/GLBRCORG/emcdaniel/Lake-MAGs/outs/$(Cluster)_$(Process)_bowtie-mapping.out
+error = /home/GLBRCORG/emcdaniel/Lake-MAGs/errs/$(Cluster)_$(Process)_bowtie-mapping.err
+log = /home/GLBRCORG/emcdaniel/Lake-MAGs/logs/$(Cluster)_$(Process)_bowtie-mapping.log
+
+queue reads from metadata/mendota-metagenomes.txt
