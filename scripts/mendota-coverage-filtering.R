@@ -31,6 +31,10 @@ genome_sample_counts <- mendota_table_info %>%
   count(genome, gtdb_classification) %>% 
   arrange(desc(n))
 
+mendota_table_info %>% 
+  count(sample) %>% 
+  arrange(desc(n))
+
 write.csv(genome_sample_counts, "results/mendota_historical/inStrain/mendota_mag_coverage_samples.csv", quote = FALSE, row.names = FALSE)
 
 mendota_queues <- mendota_table_info %>% 
@@ -56,7 +60,24 @@ top_lineages <- genome_sample_counts %>%
   top_n(5, n) %>% 
   pull(genome)
 
-mendota_coverage_info %>% 
+top_lineages_coverage_dynamics_plot <- mendota_coverage_info %>% 
   filter(genome %in% top_lineages) %>% 
   drop_na() %>% 
   ggplot(aes(x=date, y=coverage)) + geom_point() + facet_wrap(~ gtdb_classification, ncol=1) + theme(axis.text.x=element_text(angle=85, vjust=0.5, hjust=0.5))
+
+mendota_coverage_info$gtdb_classification <- as.character(mendota_coverage_info$gtdb_classification)
+
+coverage_dynamics_plot <- mendota_coverage_info %>%
+  drop_na() %>% 
+  separate(gtdb_classification, into=c("taxonomy", "phylum"), sep="p__") %>% 
+  mutate(phylum = gsub(";.*", "", phylum)) %>%
+  ggplot(aes(x=date, y=coverage)) + geom_point(aes(color=phylum)) + theme_bw() + theme(axis.text.x=element_text(angle=85, vjust=0.5, hjust=0.5))
+
+mendota_coverage_info %>% 
+  drop_na() %>% 
+  count(date) %>% 
+  arrange(desc(n))
+
+ggsave("figs/coverage-dynamics.png", coverage_dynamics_plot, width=15, height=5, units=c("in"))
+
+ggsave("figs/top5-lineages-coverage-dynamics.png", top_lineages_coverage_dynamics_plot, width=15, height=7, units=c("in")) 
