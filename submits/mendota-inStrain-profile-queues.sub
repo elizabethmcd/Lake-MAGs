@@ -1,0 +1,15 @@
+##############################
+# Mendota inStrain full profiles
+##############################
+
+executable = /home/GLBRCORG/emcdaniel/Lake-MAGs/executables/mendota-inStrain-profile-queues.sh
+
+request_cpus = 6
+request_memory = 150GB
+arguments = $(genome) $(mapping)
+
+output = /home/GLBRCORG/emcdaniel/Lake-MAGs/outs/$(Cluster)_$(Process)_profile.out
+error = /home/GLBRCORG/emcdaniel/Lake-MAGs/errs/$(Cluster)_$(Process)_profile.err
+log = /home/GLBRCORG/emcdaniel/Lake-MAGs/logs/$(Cluster)_$(Process)_profile.log
+
+queue genome,mapping from metadata/mendota-inStrain-queues.txt
