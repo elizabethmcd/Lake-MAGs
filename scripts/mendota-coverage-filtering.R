@@ -81,3 +81,27 @@ mendota_coverage_info %>%
 ggsave("figs/coverage-dynamics.png", coverage_dynamics_plot, width=15, height=5, units=c("in"))
 
 ggsave("figs/top5-lineages-coverage-dynamics.png", top_lineages_coverage_dynamics_plot, width=15, height=7, units=c("in")) 
+
+# Coverage of LQ98 set 
+coverage_path <- "results/mendota_historical/LQ98set_inStrain/quick_profiles/"
+covg_files <- dir(coverage_path, pattern="*.csv")
+lq98_covg <- data_frame(filename = covg_files) %>%
+  mutate(file_contents = map(filename, ~ read.csv(file.path(coverage_path, .)))
+  ) %>%
+  unnest()
+
+lq98_table <- lq98_covg %>% 
+  mutate(sample = gsub("-quick-profile.csv", "", filename)) %>% 
+  select(genome, sample, coverage, breadth) %>% 
+  filter(coverage > 10 & breadth > 0.9)
+
+lq98_table %>% 
+  count(genome) %>% 
+  arrange(desc(n))
+
+lq98_queues <- lq98_table %>% 
+  select(genome, sample) %>% 
+  mutate(genome = paste(genome, "fa", sep=".")) %>% 
+  mutate(sample = paste(sample, "spRep.sorted.bam", sep="-"))
+
+write_tsv(lq98_queues, "metadata/lq98-inStrain-queues.txt", col_names = FALSE)
