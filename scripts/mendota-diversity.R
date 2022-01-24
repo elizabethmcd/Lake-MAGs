@@ -80,3 +80,28 @@ lq98set_div_table_greedy <- lq98set_greedy_div %>%
   mutate(sample = gsub(".IS_genome_info.tsv", "", sample)) %>% 
   select(genome, sample, coverage, breadth, nucl_diversity)
   # greedy mapping has 519 genome : sample pairs
+
+lq98set_div_info <- left_join(lq98set_div_table_greedy, mendota_metagenome_info) %>% drop_na()
+
+lq98set_div_table_greedy %>% 
+  count(genome) %>% 
+  arrange(desc(n))
+
+top10_lq98set <- lq98set_div_info %>% 
+  count(genome) %>% 
+  top_n(10, n) %>% 
+  pull(genome)
+
+lq98set_covg_plot <- lq98set_div_info %>% 
+  filter(genome %in% top10_lq98set) %>% 
+  ggplot(aes(x=date, y=coverage)) + geom_point() + facet_wrap(~ genome, ncol=1) + theme(axis.text.x=element_text(angle=85, vjust=0.5, hjust=0.5))
+
+lq98set_nucldiv_plot <- lq98set_div_info %>%  
+  filter(genome %in% top10_lq98set) %>% 
+  ggplot(aes(x=date, y=nucl_diversity)) + geom_point() + facet_wrap(~ genome, ncol=1) + theme(axis.text.x=element_text(angle=85, vjust=0.5, hjust=0.5))
+
+lq98set_grid <- plot_grid(lq98set_covg_plot, lq98set_nucldiv_plot, ncol=2)
+
+ggsave("figs/mendota-lq98set-covg-nucldiv-plot.png", width=20, height=10, units=c("in"))
+
+write.csv(lq98set_div_info, "results/mendota_historical/lq98set_mendota_greedy_diversity_table.csv", quote=FALSE, row.names = FALSE)
