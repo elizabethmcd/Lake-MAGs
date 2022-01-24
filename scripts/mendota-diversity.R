@@ -51,3 +51,32 @@ mendota_div_df_clean <- mendota_div_df %>%
 
 write.csv(mendota_div_df_clean, "results/mendota_historical/inStrain/mendota-diversity-table.csv", quote=FALSE, row.names = FALSE)
 
+# LQ98set diversity results 
+lq98set_path <- "results/mendota_historical/LQ98set_inStrain/"
+lq98set_diversity_files <- dir(lq98set_path, pattern=".tsv")
+lq98set_div <- data_frame(filename = lq98set_diversity_files) %>%
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(lq98set_path, .)))
+  ) %>%
+  unnest()
+
+lq98set_div_table <- lq98set_div %>% 
+  filter(coverage > 10 & breadth > 0.9) %>% 
+  separate(filename, into=c("org", "sample"), sep="-vs-") %>% 
+  mutate(sample = gsub(".IS_genome_info.tsv", "", sample)) %>% 
+  select(genome, sample, coverage, breadth, nucl_diversity)
+  # only 22 genome : sample pairs met the coverage/breadth threshold when using only paired-end reads mapping in exact matches 
+
+# LQ98set greedy using all mapped reads
+lq98set_greedy_path <- "results/mendota_historical/LQ98set_inStrain_greedy/"
+lq98set_greedy_diversity_files <- dir(lq98set_greedy_path, pattern=".tsv")
+lq98set_greedy_div <- data_frame(filename = lq98set_greedy_diversity_files) %>%
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(lq98set_greedy_path, .)))
+  ) %>%
+  unnest()
+
+lq98set_div_table_greedy <- lq98set_greedy_div %>% 
+  filter(coverage > 10 & breadth > 0.9) %>% 
+  separate(filename, into=c("org", "sample"), sep="-vs-") %>% 
+  mutate(sample = gsub(".IS_genome_info.tsv", "", sample)) %>% 
+  select(genome, sample, coverage, breadth, nucl_diversity)
+  # greedy mapping has 519 genome : sample pairs
